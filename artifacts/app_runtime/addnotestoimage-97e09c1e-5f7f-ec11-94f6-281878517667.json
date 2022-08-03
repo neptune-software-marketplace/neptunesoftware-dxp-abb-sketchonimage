@@ -1,0 +1,1366 @@
+{
+	"id": "97e09c1e-5f7f-ec11-94f6-281878517667",
+	"createdAt": "2022-01-27T10:51:57.546Z",
+	"updatedAt": "2022-08-03T08:10:10.323Z",
+	"createdBy": "carlos.pires@neptune-software.com",
+	"changedBy": "kristin.eliassen@neptune-software.com",
+	"objects": [
+		{
+			"fieldNo": "cf102d02-f4b0-4ce5-d64b-ebd6c7c79047",
+			"fieldName": "oShell",
+			"fieldParent": 0,
+			"fieldType": "sap.m.Shell",
+			"script": "",
+			"request": [],
+			"response": [],
+			"attributes": [
+				{
+					"attribute": "appWidthLimited",
+					"grouping": "Properties",
+					"value": "false",
+					"script": "",
+					"translation": []
+				}
+			],
+			"data": [
+				{
+					"fieldNo": "40d6a78a-5a99-41c1-9e91-32ca72e11881",
+					"fieldName": "oApp",
+					"fieldParent": "cf102d02-f4b0-4ce5-d64b-ebd6c7c79047",
+					"fieldType": "sap.m.App",
+					"script": "",
+					"request": [],
+					"response": [],
+					"attributes": [],
+					"data": [
+						{
+							"fieldNo": "68293751-5cb4-4e30-8299-4b5cd5791c71",
+							"fieldName": "oPageImageEdit",
+							"fieldParent": "40d6a78a-5a99-41c1-9e91-32ca72e11881",
+							"fieldType": "sap.m.Page",
+							"script": "",
+							"request": [],
+							"response": [],
+							"attributes": [
+								{
+									"attribute": "styleClass",
+									"grouping": "Properties",
+									"value": "hideScrollBar",
+									"script": "",
+									"translation": []
+								},
+								{
+									"attribute": "enableScrolling",
+									"grouping": "Properties",
+									"value": "false",
+									"script": "",
+									"translation": []
+								},
+								{
+									"attribute": "enableCompactMode",
+									"grouping": "Properties",
+									"value": "true",
+									"script": "",
+									"translation": []
+								}
+							],
+							"data": [
+								{
+									"fieldNo": "a2a42bc7-4c4c-4f74-e99d-3f6b7da9453b",
+									"fieldName": "BarImageEditorTop",
+									"fieldParent": "68293751-5cb4-4e30-8299-4b5cd5791c71",
+									"fieldType": "sap.m.Bar",
+									"script": "",
+									"request": [],
+									"response": [],
+									"attributes": [
+										{
+											"attribute": "position",
+											"grouping": "Parent",
+											"value": "setCustomHeader",
+											"script": "",
+											"translation": []
+										}
+									],
+									"data": [
+										{
+											"fieldNo": "82ff3333-207c-45e3-bceb-ebe09bd5cb24",
+											"fieldName": "Left",
+											"fieldParent": "a2a42bc7-4c4c-4f74-e99d-3f6b7da9453b",
+											"fieldType": "neptune.BarContent",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "position",
+													"grouping": "Parent",
+													"value": "ContentLeft",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": [
+												{
+													"fieldNo": "1818f648-04bb-4e02-b1c4-9f0cfcecf69f",
+													"fieldName": "FileUploader",
+													"fieldParent": "82ff3333-207c-45e3-bceb-ebe09bd5cb24",
+													"fieldType": "sap.ui.unified.FileUploader",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "style",
+															"grouping": "Properties",
+															"value": "Accept",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "sameFilenameAllowed",
+															"grouping": "Properties",
+															"value": "true",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "icon",
+															"grouping": "Properties",
+															"value": "sap-icon://fa-solid/file-upload",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "fileType",
+															"grouping": "Properties",
+															"value": "png,jpg",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "buttonText",
+															"grouping": "Properties",
+															"value": "Upload",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "buttonOnly",
+															"grouping": "Properties",
+															"value": "true",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "fileAllowed",
+															"grouping": "Events",
+															"value": "Anonymous Function",
+															"script": [
+																"==OBJECT STRING==",
+																"// fetch the file info",
+																"var file = FileUploader.oFileUpload.files[0];",
+																"// creates a file object",
+																"var fileReader = new FileReader();",
+																"",
+																"fileReader.onload = function(fileLoadedEvent) {",
+																"    //reads the content of the file and assignment of the Image area",
+																"    Image.setSrc(fileLoadedEvent.target.result);",
+																"};",
+																"// reads the files as a Base64",
+																"fileReader.readAsDataURL(file);",
+																""
+															],
+															"translation": []
+														}
+													],
+													"data": []
+												},
+												{
+													"fieldNo": "2b98db1e-6c0b-4df4-d51f-afbd0701ce39",
+													"fieldName": "ButtonAddPhoto",
+													"fieldParent": "82ff3333-207c-45e3-bceb-ebe09bd5cb24",
+													"fieldType": "sap.m.Button",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "type",
+															"grouping": "Properties",
+															"value": "Transparent",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "text",
+															"grouping": "Properties",
+															"value": "Photo",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "icon",
+															"grouping": "Properties",
+															"value": "sap-icon://add-photo",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "press",
+															"grouping": "Events",
+															"value": "Anonymous Function",
+															"script": [
+																"==OBJECT STRING==",
+																"if (window.cordova) {",
+																"    // To be used on a mobile device",
+																"    capturePhoto();",
+																"} else {",
+																"    // To be used on a PC / MAC",
+																"    // starts a webcam stream to allow the photo to be taken",
+																"    let CallCamera = async function() {",
+																"        try {",
+																"            stream = await navigator.mediaDevices.getUserMedia({",
+																"                //video: true,",
+																"                video: {",
+																"    // here the stream resolution can be adjusted",
+																"                            width: { ideal: 1920 },",
+																"                            height: { ideal: 1080 }",
+																"                        },",
+																"                audio: false",
+																"            });",
+																"        } catch (error) {",
+																"            alert(error.message);",
+																"            return;",
+																"        }",
+																"    // opens the dialog where the video stream is displayed",
+																"        DialogVideo.open();",
+																"    // Retrives the object",
+																"        let video = document.querySelector(\"#video\");",
+																"        video.srcObject = stream;",
+																"        video.style.display = 'block';",
+																"    };",
+																"   // calls the asynchronous function",
+																"    CallCamera();",
+																"}",
+																""
+															],
+															"translation": []
+														}
+													],
+													"data": []
+												}
+											]
+										},
+										{
+											"fieldNo": "813bce9b-be51-4d9c-e36e-8b53b3aaeb8d",
+											"fieldName": "Middle",
+											"fieldParent": "a2a42bc7-4c4c-4f74-e99d-3f6b7da9453b",
+											"fieldType": "neptune.BarContent",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "position",
+													"grouping": "Parent",
+													"value": "ContentMiddle",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": [
+												{
+													"fieldNo": "ae923fd3-0988-4f58-9d83-8e48126cd4f4",
+													"fieldName": "ButtonColor",
+													"fieldParent": "813bce9b-be51-4d9c-e36e-8b53b3aaeb8d",
+													"fieldType": "sap.m.Button",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "type",
+															"grouping": "Properties",
+															"value": "Transparent",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "text",
+															"grouping": "Properties",
+															"value": "Color",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "icon",
+															"grouping": "Properties",
+															"value": "sap-icon://palette",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "press",
+															"grouping": "Events",
+															"value": "ColorPopover.openBy(this);",
+															"script": "ColorPopover.openBy(this);",
+															"translation": []
+														}
+													],
+													"data": []
+												},
+												{
+													"fieldNo": "c08e92b4-9792-42b9-b4bc-b28ebc27937b",
+													"fieldName": "ColorPopover",
+													"fieldParent": "813bce9b-be51-4d9c-e36e-8b53b3aaeb8d",
+													"fieldType": "sap.m.ResponsivePopover",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "title",
+															"grouping": "Properties",
+															"value": "Pick the Color",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "placement",
+															"grouping": "Properties",
+															"value": "Vertical",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "icon",
+															"grouping": "Properties",
+															"value": "sap-icon://palette",
+															"script": "",
+															"translation": []
+														}
+													],
+													"data": [
+														{
+															"fieldNo": "bd077e9d-58aa-4e65-ce44-aa0ff7cb9962",
+															"fieldName": "ColorPicker",
+															"fieldParent": "c08e92b4-9792-42b9-b4bc-b28ebc27937b",
+															"fieldType": "sap.ui.unified.ColorPicker",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "change",
+																	"grouping": "Events",
+																	"value": "Anonymous Function",
+																	"script": [
+																		"==OBJECT STRING==",
+																		"// assign the new color and transparency",
+																		" oSignaturePad.penColor = this.getColorString();",
+																		" IconSelectedColor.setColor(this.Color.hex);",
+																		""
+																	],
+																	"translation": []
+																}
+															],
+															"data": []
+														}
+													]
+												},
+												{
+													"fieldNo": "b1c08eed-c959-470e-9eb1-a3eb313cdd15",
+													"fieldName": "ButtonPen",
+													"fieldParent": "813bce9b-be51-4d9c-e36e-8b53b3aaeb8d",
+													"fieldType": "sap.m.Button",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "type",
+															"grouping": "Properties",
+															"value": "Accept",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "text",
+															"grouping": "Properties",
+															"value": "Size",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "icon",
+															"grouping": "Properties",
+															"value": "sap-icon://fa-solid/pencil-alt",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "press",
+															"grouping": "Events",
+															"value": "PenPopover.openBy(this);",
+															"script": "PenPopover.openBy(this);",
+															"translation": []
+														}
+													],
+													"data": []
+												},
+												{
+													"fieldNo": "17203e64-135a-4dd7-fd9d-2b9d796acbb7",
+													"fieldName": "PenPopover",
+													"fieldParent": "813bce9b-be51-4d9c-e36e-8b53b3aaeb8d",
+													"fieldType": "sap.m.ResponsivePopover",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "title",
+															"grouping": "Properties",
+															"value": "Pen size",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "placement",
+															"grouping": "Properties",
+															"value": "Vertical",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "icon",
+															"grouping": "Properties",
+															"value": "sap-icon://fa-solid/pencil-alt",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "horizontalScrolling",
+															"grouping": "Properties",
+															"value": "false",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "enableCompactMode",
+															"grouping": "Properties",
+															"value": "true",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "contentWidth",
+															"grouping": "Properties",
+															"value": "100%",
+															"script": "",
+															"translation": []
+														}
+													],
+													"data": [
+														{
+															"fieldNo": "3c4173e4-6312-41a8-ca9b-b9d12d5a0048",
+															"fieldName": "Slider",
+															"fieldParent": "17203e64-135a-4dd7-fd9d-2b9d796acbb7",
+															"fieldType": "sap.m.Slider",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "showAdvancedTooltip",
+																	"grouping": "Properties",
+																	"value": "true",
+																	"script": "",
+																	"translation": []
+																},
+																{
+																	"attribute": "min",
+																	"grouping": "Properties",
+																	"value": "1",
+																	"script": "",
+																	"translation": []
+																},
+																{
+																	"attribute": "max",
+																	"grouping": "Properties",
+																	"value": "50",
+																	"script": "",
+																	"translation": []
+																},
+																{
+																	"attribute": "enableTickmarks",
+																	"grouping": "Properties",
+																	"value": "true",
+																	"script": "",
+																	"translation": []
+																},
+																{
+																	"attribute": "change",
+																	"grouping": "Events",
+																	"value": "Anonymous Function",
+																	"script": [
+																		"==OBJECT STRING==",
+																		"// \tassign the pen size",
+																		"\toSignaturePad.maxWidth = this.getValue();",
+																		"\toSignaturePad.minWidth = this.getValue();",
+																		"\t",
+																		"\tTextPen.setText(this.getValue());",
+																		""
+																	],
+																	"translation": []
+																}
+															],
+															"data": []
+														}
+													]
+												}
+											]
+										},
+										{
+											"fieldNo": "5b5a4c48-1547-4207-d758-86f194d92955",
+											"fieldName": "Right",
+											"fieldParent": "a2a42bc7-4c4c-4f74-e99d-3f6b7da9453b",
+											"fieldType": "neptune.BarContent",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "position",
+													"grouping": "Parent",
+													"value": "ContentRight",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": [
+												{
+													"fieldNo": "e6a821a9-aaea-48e1-fcff-186b6a006a1a",
+													"fieldName": "LabelPen",
+													"fieldParent": "5b5a4c48-1547-4207-d758-86f194d92955",
+													"fieldType": "sap.m.Label",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "text",
+															"grouping": "Properties",
+															"value": "Pen Size",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "styleClassVisibility",
+															"grouping": "Properties",
+															"value": "sapUiHideOnPhone",
+															"script": "",
+															"translation": []
+														}
+													],
+													"data": []
+												},
+												{
+													"fieldNo": "f65bec27-ab43-4fca-ddfa-c736fed5c1fb",
+													"fieldName": "TextPen",
+													"fieldParent": "5b5a4c48-1547-4207-d758-86f194d92955",
+													"fieldType": "sap.m.Text",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "text",
+															"grouping": "Properties",
+															"value": "1",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "styleClassVisibility",
+															"grouping": "Properties",
+															"value": "sapUiHideOnPhone",
+															"script": "",
+															"translation": []
+														}
+													],
+													"data": []
+												},
+												{
+													"fieldNo": "ca936a62-6c33-4c99-f162-30e9ab59eef5",
+													"fieldName": "LabelColor",
+													"fieldParent": "5b5a4c48-1547-4207-d758-86f194d92955",
+													"fieldType": "sap.m.Label",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "text",
+															"grouping": "Properties",
+															"value": "Color Selected",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "styleClassVisibility",
+															"grouping": "Properties",
+															"value": "sapUiHideOnPhone",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "styleClassMargin",
+															"grouping": "Properties",
+															"value": "sapUiMediumMarginBegin",
+															"script": "",
+															"translation": []
+														}
+													],
+													"data": []
+												},
+												{
+													"fieldNo": "17c2f9cb-8da2-41b0-c387-6ad53878855c",
+													"fieldName": "IconSelectedColor",
+													"fieldParent": "5b5a4c48-1547-4207-d758-86f194d92955",
+													"fieldType": "sap.ui.core.Icon",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "styleClassVisibility",
+															"grouping": "Properties",
+															"value": "sapUiHideOnPhone",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "styleClassMargin",
+															"grouping": "Properties",
+															"value": "sapUiTinyMarginEnd",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "src",
+															"grouping": "Properties",
+															"value": "sap-icon://fa-solid/palette",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "color",
+															"grouping": "Properties",
+															"value": "#000000",
+															"script": "",
+															"translation": []
+														}
+													],
+													"data": []
+												}
+											]
+										}
+									]
+								},
+								{
+									"fieldNo": "d7cbc118-9f1d-4ad7-d98c-66419669bfae",
+									"fieldName": "ScrollContainer",
+									"fieldParent": "68293751-5cb4-4e30-8299-4b5cd5791c71",
+									"fieldType": "sap.m.ScrollContainer",
+									"script": "",
+									"request": [],
+									"response": [],
+									"attributes": [
+										{
+											"attribute": "vertical",
+											"grouping": "Properties",
+											"value": "true",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "height",
+											"grouping": "Properties",
+											"value": "100%",
+											"script": "",
+											"translation": []
+										}
+									],
+									"data": [
+										{
+											"fieldNo": "7a4e2336-3e9e-418b-f1cf-3718265edae4",
+											"fieldName": "oHTMLObject",
+											"fieldParent": "d7cbc118-9f1d-4ad7-d98c-66419669bfae",
+											"fieldType": "sap.ui.core.HTML",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "content",
+													"grouping": "Properties",
+													"value": "<canvas id='SignaturePad' class='signature-pad'></canvas>",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": []
+										}
+									]
+								},
+								{
+									"fieldNo": "6236f978-af0d-4a76-8fc3-8860caa78b8d",
+									"fieldName": "Image",
+									"fieldParent": "68293751-5cb4-4e30-8299-4b5cd5791c71",
+									"fieldType": "sap.m.Image",
+									"script": "",
+									"request": [],
+									"response": [],
+									"attributes": [
+										{
+											"attribute": "load",
+											"grouping": "Events",
+											"value": "Anonymous Function",
+											"script": [
+												"==OBJECT STRING==",
+												"// Clears the Signaturepad",
+												"oSignaturePad.clear();",
+												"",
+												"// Resizes the signaturepad to the image size, otherwise it will stretch the image",
+												"let size = Size_calc(Image.getDomRef().clientWidth, Image.getDomRef().clientHeight);",
+												"",
+												"if (size.width !== \"\") {",
+												"    oSignaturePad._canvas.height = size.height;",
+												"    oSignaturePad._canvas.width  = size.width;",
+												"} else {",
+												"    oSignaturePad._canvas.height = Image.getDomRef().clientHeight;",
+												"    oSignaturePad._canvas.width  = Image.getDomRef().clientWidth;",
+												"}",
+												"",
+												"",
+												"// Set the image to the signaturePad",
+												"oSignaturePad.fromDataURL(Image.getSrc());",
+												""
+											],
+											"translation": []
+										}
+									],
+									"data": []
+								},
+								{
+									"fieldNo": "9a176fc8-537c-453e-da55-c56001537f90",
+									"fieldName": "BarImageEditorFooter",
+									"fieldParent": "68293751-5cb4-4e30-8299-4b5cd5791c71",
+									"fieldType": "sap.m.Bar",
+									"script": "",
+									"request": [],
+									"response": [],
+									"attributes": [
+										{
+											"attribute": "position",
+											"grouping": "Parent",
+											"value": "setFooter",
+											"script": "",
+											"translation": []
+										}
+									],
+									"data": [
+										{
+											"fieldNo": "5592f7ed-ffb2-4d33-b95f-59a240dc8653",
+											"fieldName": "oBarContentDC",
+											"fieldParent": "9a176fc8-537c-453e-da55-c56001537f90",
+											"fieldType": "neptune.BarContent",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "position",
+													"grouping": "Parent",
+													"value": "ContentMiddle",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": [
+												{
+													"fieldNo": "8b088705-3fc8-4b3d-eef6-5d38a9e8c616",
+													"fieldName": "oButtonRefresh",
+													"fieldParent": "5592f7ed-ffb2-4d33-b95f-59a240dc8653",
+													"fieldType": "sap.m.Button",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "icon",
+															"grouping": "Properties",
+															"value": "sap-icon://refresh",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "press",
+															"grouping": "Events",
+															"value": "Anonymous Function",
+															"script": [
+																"==OBJECT STRING==",
+																"// Clears the Signaturepad",
+																"oSignaturePad.clear();",
+																"",
+																"// Set Image to Signaturepad",
+																"oSignaturePad.fromDataURL(Image.getSrc());",
+																""
+															],
+															"translation": []
+														}
+													],
+													"data": []
+												}
+											]
+										},
+										{
+											"fieldNo": "0ee18104-897e-4483-d237-b9daa1ebd14f",
+											"fieldName": "oBarContentDR",
+											"fieldParent": "9a176fc8-537c-453e-da55-c56001537f90",
+											"fieldType": "neptune.BarContent",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "position",
+													"grouping": "Parent",
+													"value": "ContentRight",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": [
+												{
+													"fieldNo": "9eddb9ca-c972-453b-c2f4-33240f8e5fef",
+													"fieldName": "oButtonSave",
+													"fieldParent": "0ee18104-897e-4483-d237-b9daa1ebd14f",
+													"fieldType": "sap.m.Button",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "type",
+															"grouping": "Properties",
+															"value": "Accept",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "text",
+															"grouping": "Properties",
+															"value": "Local",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "icon",
+															"grouping": "Properties",
+															"value": "sap-icon://save",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "press",
+															"grouping": "Events",
+															"value": "Anonymous Function",
+															"script": [
+																"==OBJECT STRING==",
+																"Image.setSrc( oSignaturePad.toDataURL() );",
+																"",
+																"",
+																"//here you can put the logic to save the image",
+																""
+															],
+															"translation": []
+														}
+													],
+													"data": []
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						{
+							"fieldNo": "7e1baf37-6c6b-47f8-94f2-fec0afe56211",
+							"fieldName": "PageHidden",
+							"fieldParent": "40d6a78a-5a99-41c1-9e91-32ca72e11881",
+							"fieldType": "sap.m.Page",
+							"script": "",
+							"request": [],
+							"response": [],
+							"attributes": [],
+							"data": [
+								{
+									"fieldNo": "081e4502-3587-4888-ef53-9ee46363563b",
+									"fieldName": "ButtonTakeFoto",
+									"fieldParent": "7e1baf37-6c6b-47f8-94f2-fec0afe56211",
+									"fieldType": "sap.m.Button",
+									"script": "",
+									"request": [],
+									"response": [],
+									"attributes": [
+										{
+											"attribute": "text",
+											"grouping": "Properties",
+											"value": "Take Photo",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "icon",
+											"grouping": "Properties",
+											"value": "sap-icon://camera",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "press",
+											"grouping": "Events",
+											"value": "Anonymous Function",
+											"script": [
+												"==OBJECT STRING==",
+												"// create a Canvas area to temporarily save the image",
+												"var imgTmp = document.createElement(\"CANVAS\");",
+												"",
+												"// Retrives the sream settings",
+												"let stream_settings = stream.getVideoTracks()[0].getSettings();",
+												"",
+												"// calculates the image size to fit the screen",
+												"let size = Size_calc(stream_settings.width, stream_settings.height) ;",
+												"// adjust the canvas size",
+												"if (size.width !== \"\") {",
+												"    imgTmp.width = size.width;",
+												"    imgTmp.height = size.height;",
+												"} else {",
+												"    imgTmp.width = stream_settings.width;",
+												"    imgTmp.height = stream_settings.height;",
+												"}",
+												"// copys the a image from the video stream",
+												"imgTmp.getContext('2d').drawImage(video, 0, 0, imgTmp.width, imgTmp.height);",
+												"",
+												"//transfer the image from the canvas to the image area",
+												"Image.setSrc(imgTmp.toDataURL('image/jpeg'));",
+												"",
+												"// stops the video stream",
+												"stream.getTracks().forEach(function(track) {",
+												"    track.stop();",
+												"});",
+												"// closes the dialog",
+												"DialogVideo.close();",
+												""
+											],
+											"translation": []
+										}
+									],
+									"data": []
+								},
+								{
+									"fieldNo": "cc5808c2-baa8-499c-cd58-512e8d7f2886",
+									"fieldName": "ButtonClose",
+									"fieldParent": "7e1baf37-6c6b-47f8-94f2-fec0afe56211",
+									"fieldType": "sap.m.Button",
+									"script": "",
+									"request": [],
+									"response": [],
+									"attributes": [
+										{
+											"attribute": "type",
+											"grouping": "Properties",
+											"value": "Reject",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "text",
+											"grouping": "Properties",
+											"value": "Close",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "icon",
+											"grouping": "Properties",
+											"value": "sap-icon://sys-cancel",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "press",
+											"grouping": "Events",
+											"value": "Anonymous Function",
+											"script": [
+												"==OBJECT STRING==",
+												"// Stops the video stream and closes the dialog",
+												"",
+												"stream.getTracks().forEach(function(track) {",
+												"    track.stop();",
+												"});",
+												"",
+												"DialogVideo.close();",
+												""
+											],
+											"translation": []
+										}
+									],
+									"data": []
+								},
+								{
+									"fieldNo": "5aeff6d5-7cdb-4221-968f-fecf28aa4421",
+									"fieldName": "DialogVideo",
+									"fieldParent": "7e1baf37-6c6b-47f8-94f2-fec0afe56211",
+									"fieldType": "sap.m.Dialog",
+									"script": "",
+									"request": [],
+									"response": [],
+									"attributes": [
+										{
+											"attribute": "title",
+											"grouping": "Properties",
+											"value": "Camera Stream",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "endButton",
+											"grouping": "Associations",
+											"value": "ButtonClose",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "beginButton",
+											"grouping": "Associations",
+											"value": "ButtonTakeFoto",
+											"script": "",
+											"translation": []
+										}
+									],
+									"data": [
+										{
+											"fieldNo": "e3d3ef97-a9ef-4ab3-9fd4-fe1c8d479ef7",
+											"fieldName": "HTML",
+											"fieldParent": "5aeff6d5-7cdb-4221-968f-fecf28aa4421",
+											"fieldType": "sap.ui.core.HTML",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "content",
+													"grouping": "Properties",
+													"value": "<video id=video width=400 height=250 autoplay></video>",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": []
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"fieldNo": 99999,
+			"data": [
+				{
+					"fieldNo": "2c8f6785-5a91-4cf2-c0fd-59c83847a18d",
+					"fieldName": "Readme",
+					"fieldParent": 99999,
+					"fieldType": "neptune.Text",
+					"script": [
+						"==OBJECT STRING==",
+						"------------------",
+						"The content of the SP_Init should be moved to the Init of the app or to the place where ",
+						"the navigation to oPageImageEdit is triggered",
+						"------------------",
+						"",
+						"1)",
+						"Copy this to the stylesheet of your application:",
+						"",
+						".hideScrollBar section {",
+						"    overflow: hidden;",
+						"}",
+						"",
+						"2)",
+						"Copy this to the Header of your application, and/or Launchpad:",
+						"",
+						"//<!-- Signature Pad -->",
+						"<script src=\"https://cdn.jsdelivr.net/npm/signature_pad@2.3.2/dist/signature_pad.min.js\"></script>",
+						""
+					],
+					"request": [],
+					"response": [],
+					"attributes": [],
+					"data": []
+				},
+				{
+					"fieldNo": "46500d2b-9ab7-4ef7-af4a-9de7be652a2a",
+					"fieldName": "SP_Scrips",
+					"fieldParent": 99999,
+					"fieldType": "neptune.folder",
+					"script": "",
+					"request": [],
+					"response": [],
+					"attributes": [],
+					"data": [
+						{
+							"fieldNo": "4e88f834-7e36-4e5e-8226-e4a033a0470a",
+							"fieldName": "SP_Function",
+							"fieldParent": "46500d2b-9ab7-4ef7-af4a-9de7be652a2a",
+							"fieldType": "neptune.Script",
+							"script": [
+								"==OBJECT STRING==",
+								"// calculates the sizes",
+								"function Size_calc(image_w, image_h) {",
+								"",
+								"    let percentage = \"\";",
+								"    let out ={",
+								"        \"width\" : \"\",",
+								"        \"height\": \"\"",
+								"    };",
+								"// reset the signaturePad to full screen",
+								"    oSignaturePad._canvas.height = ScrollContainer.getDomRef().clientHeight - 4;",
+								"    oSignaturePad._canvas.width = ScrollContainer.getDomRef().clientWidth - 4;",
+								"",
+								"// check if the image width is bigger than the signaturePad",
+								"    if (image_w > oSignaturePad._canvas.width) {",
+								"        //if yes calculates the percentage that need to be removed in order to fit the screen",
+								"        percentage = oSignaturePad._canvas.width / image_w;",
+								"        // adjust both sides",
+								"        out.width = image_w * percentage;",
+								"        out.height = image_h * percentage;",
+								"    }",
+								"// check if the image height is bigger than the signaturePad, even after the width adjustment",
+								"    if ((out.height !== \"\" && out.height > oSignaturePad._canvas.height) ||",
+								"        (out.height === \"\" && image_h > oSignaturePad._canvas.height)) {",
+								"        //if yes calculates the percentage that need to be removed in order to fit the screen",
+								"        percentage = oSignaturePad._canvas.height / image_h;",
+								"        // adjust both sides",
+								"        out.width = image_w * percentage;",
+								"        out.height = image_h * percentage;",
+								"    }",
+								" return out;",
+								"}",
+								""
+							],
+							"request": [],
+							"response": [],
+							"attributes": [],
+							"data": []
+						},
+						{
+							"fieldNo": "d612d835-d709-4d94-ca51-56d4bae43715",
+							"fieldName": "SP_Camera",
+							"fieldParent": "46500d2b-9ab7-4ef7-af4a-9de7be652a2a",
+							"fieldType": "neptune.Script",
+							"script": [
+								"==OBJECT STRING==",
+								"",
+								"",
+								"//Cordova",
+								"// var pictureSource;    picture source",
+								"// var destinationType;  sets the format of returned value",
+								"",
+								"// Wait for device API libraries to load",
+								"document.addEventListener(\"deviceready\", onDeviceReady, false);",
+								"",
+								"// device APIs are available",
+								"function onDeviceReady() {",
+								"    pictureSource = navigator.camera.PictureSourceType;",
+								"    destinationType = navigator.camera.DestinationType;",
+								"}",
+								"",
+								"// Called when a photo is successfully retrieved",
+								"function onPhotoDataSuccess(imageData) {",
+								"    //  Show the captured photo",
+								"    //  The inline CSS rules are used to resize the image",
+								"    Image.setSrc( \"data:image/jpeg;base64,\" + imageData );",
+								"}",
+								"",
+								"// A button will call this function",
+								"function capturePhoto() {",
+								"    //  Take picture using device camera and retrieve image as base64-encoded string",
+								"    navigator.camera.getPicture(onPhotoDataSuccess, onFail, {",
+								"        quality: 50,",
+								"        correctOrientation: true,",
+								"        destinationType: destinationType.DATA_URL",
+								"    });",
+								"}",
+								"",
+								"",
+								"// Called if something bad happens.",
+								"function onFail(message) {",
+								"    alert('Failed because: ' + message);",
+								"}",
+								""
+							],
+							"request": [],
+							"response": [],
+							"attributes": [],
+							"data": []
+						},
+						{
+							"fieldNo": "db4677da-25cd-4212-8731-5ec6b00397e8",
+							"fieldName": "SP_Init",
+							"fieldParent": "46500d2b-9ab7-4ef7-af4a-9de7be652a2a",
+							"fieldType": "neptune.Script",
+							"script": [
+								"==OBJECT STRING==",
+								"// Before Display",
+								"",
+								"sap.ui.getCore().attachInit(function () {",
+								"    setTimeout(function () {",
+								"        //create the signature object ",
+								"        var canvas = document.getElementById('SignaturePad');",
+								"        oSignaturePad = new SignaturePad(canvas);",
+								"        ",
+								"        // define the size",
+								"",
+								"        oSignaturePad._canvas.height = ScrollContainer.getDomRef().clientHeight - 4;",
+								"        oSignaturePad._canvas.width = ScrollContainer.getDomRef().clientWidth - 4;",
+								"",
+								"        // set the colorPicker to black and solid ColorPicker",
+								"        // Red",
+								"        ColorPicker.Color.r = 0;",
+								"        // Green",
+								"        ColorPicker.Color.g = 0;",
+								"        // Blu",
+								"        ColorPicker.Color.b = 0;",
+								"        // Transparency",
+								"        ColorPicker.Color.a = 1;",
+								"        // Set the pencil size to 1",
+								"        oSignaturePad.maxWidth = 1;",
+								"        oSignaturePad.minWidth = 1;",
+								"",
+								"        // Clearing the image,",
+								"        Image.setSrc(\"\");",
+								"        // Load an initial Image",
+								"        // Image.setSrc(",
+								"        //     \"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAABaCAYAAAACcWsdAAAZIUlEQVR42u2deZRcVZ3HP6+qutNb0p2ETpN09oRAAsgiIgKWIiKgkLHGgKKgiAIKzoyODMqonIO4zDAyR8UZRxZFmYERhJYMIoo40OxLWEMCScjeWbrTSTrp7uqlqt78cb\" +",
+								"        //     \"9v+lJUb0l16Jjf95w+3V313n13+d3v/W33PjAYDAaDwWAwGAwGg8FgMBgMBoPBYDAYDAaDwWAwGAwGg8FgMBgMBoPBYDAYDAaDwWAwGAwGg8FgMBgMBoPBYDAYDAaDwWAwGAwGg8FgMBgMBkN/CEZbhdKL6wFKgCqgGqgBKvUZQDfQDuwE2oAOIFu+sMlG02AwwtonJB\" +",
+								"        //     \"UTOR0CvAs4Vn8fDIwFxgBxXZ4BukRWTcBy4DlgCbAW6Cxf2BTa0BoMRlgjoUnNBM7Uz1HAQUBiGHULpXVtBp4Gfgf8GdgC5EzzMhiMsIqhUR0CnKufQ6RF7S1CoBN4CfgVsBjYYhqXwWCEtada1USR1GXAYdKmRuRxwDPAD4E/ylS0ETcYjLCGRFQx4EjgSmAhzqk+0g\" +",
+								"        //     \"iBbcDPgX8DNpq2ZTDsv4jto+ckgNOBXwAf30dkFRFyLfBl4D+Ad6QX1wc27AaDaVj9aVdjgEXAd4EZb2NbQ1w08avAE+ULm7I2/AaDEZZvBpYAnwC+B0wdBe0NcQ75LwOPli9sypkIGAxmEkZlnwF8Z5SQVUTQRwH/AhwhUjUYDAeyhiU/0bE4n9WRo7DdIS5f61Jgk0\" +",
+								"        //     \"UPDYYDVMOS1lIHfAM4fBQT9WnA5UCFiYHBcOCahAngAlxUMDaK2z4GuAg41SKHBsMBSFjSro6UqbU/aC51OAd8nfmzDIYDT8MaA1wIzNpP2h8AJ+ISWWMmDgbDAUJY0lAO3w8nfxlwPm7TtcFgGMUo5j6+EuCj7IsUhtgYgjG1BJUzCcrqIFYGmXbC9EbCzg2EPa0QDi\" +",
+								"        //     \"sv9GggmV5cf7dt3TEYDgzCqsPlXSVGrLaxEmLV7yBenyI28QQon0wQK3GWXRgSZtOEnevIbX2I7KbFhJ3rIBxSbmgVcDbwe9yBgAbDnvkYkqnIcqkGxunjNmBX2NhgicqjgbBkDh4FzBsxQSgdT3z6J4nPuICgpJpc+0rCDXeR61gD2S6CkmqCsfOI1RxDYu7lxA4+g+\" +",
+								"        //     \"zqG8luvh9y3YMWD5wATANeG4JABvTlsIVAGDY2DHZtv9cZRpxEApx/tRx3EGQ37hii7AiMRyXuNJJPetbGauDbQTL1tI3/6NCw4sB7GaFNzcGYWhKHfY34lLPI7XqNzLLvktv+JGHP9jdrUEEJQdnBxCd/mPjMT5M44hqCMZPIrL11KKRVDxyTXlz/Wn+JpCKgeuDTuG\" +",
+								"        //     \"NywB3VvDhIppYWWEHrgUukfa4FfgbsMLHbZ0QVw+1fPUvyWS/XRRvwKvBAkEw9GjY2dBTpeQnJxvdwR3tHmAP8CXfckbkcRgFhVQLH0HeMcfEQLyc+5wvEp5xNtvnPZF67jrBjbeFxD3sJ0xvIrLmFXNsrJOZfRXzuZYTdLWQ33TuYX6sceCdwJ5AdQBM7HbgaKPU0rF\" +",
+								"        //     \"OBi4Jkak3eCjoP+BsJ7zrg3reLsKRlzPDGaTXwUtjYkP0LJqsTgX8CjtN4+fl2H5AW9NUgmbqtSJpPLS4HscZbzF7FBXZagVD1mo87Cy7U9yvCxgYjsqF4hYpUzkTcUcfFFjvite8jPu0ccq1Pk1n+PcKONYMvUmGGXOtTZJZ9G3rbSMz9IkHVIUPpi/kiroFMxxoJf0\" +",
+								"        //     \"w/ceA9uGNz4gXKjOm+GG/vGfpxaXu3Ab/EnZ4x7i9YtqerjSfKHMzi3gHwOu747Kzkdn4Rx6WevpSeXtwZbClcMOpekWI5cBXuRNxfAVdQnNN2jbCG4b+q80yk4vqtZpwP2W4yK28g7Nw4jLtz5HYsIbPmFoKK6cSnLoJgUIVy6h5O4jEyBQ6R2TgqlQ61rRKX1Fs9Ih\" +",
+								"        //     \"rx6PFZfQg4Xu3uxR3i+GF9/hHg68BTIq9iocpb8LqBp8PGhpawsWFj2NjQljcOFRqLGkbh26v+0k3CiYNoJnsmeNVHEtQcRW7zA+TaXhq++R/myG35A7lpHydedwrZtb8gTA+40Xm8hGnTEJ/QIZ9IKe5c+k8B39YEGcrEihaNiTIRpqq8HcAK+b26I3NFPpIZwASgGd\" +",
+								"        //     \"ig6w/VTxnuZRwvAy1hY0OoZ1RL4xifZwLPC5KpSbjXpjVJ66iWllASPcP3zQXJVJW+L5eZsy5sbMjoOeOA2ZqAa+QrqsXtfpiCc3S/rrb15JthKiMBTJbmU6evtuKCIZuAzBDMtwTwDk9z2QbcBLwcNjYQJFPrcccM/VrEEhaoxxhcEOYQ+nL0dgBvaFzS3riUqn9n5i\" +",
+								"        //     \"0CtUEytQDYpbpP0DVjvWvGAfODZKpL5TdLU6sDcsB6YFtkMqputXpeAGwEtnh1IW8MW1RGKJKcpjGaqPt3yj2wGuj0yilRGdUi9U0aw+PVxmeBNerPmOp7mK6JAds1ZuuB3mIFG4pBWIEmQkmxFYLY+GMJYmPItTwMuZ49KiXsbiFsfYrYjPMIquYORljlDC9wsEKCcK\" +",
+								"        //     \"z68uPAb4Jk6qUhDlCZVv3LcFHWSk8j2AzcA9wQJFObVN404FZgLu4NQVfjzhv7hAQmhjvL/llcVOoJPedTwD/kacHzgf/WpFgBfEbE8EmZLCUq5yJN+Ahn4ZzKFSKfC0VOMdXjW+qTH+j7K9Q/FSLELbjgw7/z1hSSGtXjfLWxTJ93iShuBX4ZJFO7B+nfQPcGXj/XA8\" +",
+								"        //     \"8DOd0bmYiFtLNZuO1lCzUBSz0zrxn4A/CTIJl6TURytNo0mb4taRXqpy7gBY3x3+MiiLXeI08GGtRnD6vvrwPep8/ukjaY1vWl6uNFat+DwBe9vkwAFwN/pzF8VG15p8bq3cAkb75mNL73A9cFydQ69c9c3GkrM1Wvm3EHGrxLz70JuEJkfY7cDYd57e+V3/a/gJuDZG\" +",
+								"        //     \"pbMUirWBpWRdHNi1gJQdUcwmwHufbVe15OmCW3aznxIEFQORNaHhmsP4ZDvG243K0FmhSzgc9K6NKDaFdRROlaCVBO5UVazjzc6aiT9btVhDod977G44CfSABL80jwNC0i5wOrvNU/34yd9v/2sxvD6EjpehHQtAL9cZCnCXZ5AhqINKfo/wv0/7S8++dI8DcFydQdkf\" +",
+								"        //     \"YWJFOV6rcvqcxe9UeU0/ROaZFjgeuBgVawjLSgjMa0Rv1cESRTDwLbC+VESTs5FLgBeL/uDekLwpTp+ZdKa7w0SKaWayGYk6c5xTwNcbe+m6uxyJ870WdzPYKuU5+eKhmIJsEk4BR9BpAEZgTJ1DIRwliN/1T6XoFXqwXkSK9/MpqzlVqkL1H7viKNMNLG6uSjna/7o0\" +",
+								"        //     \"XgYN17scazRv3UpudWA0doUZ2sa9pHi9O9+DZ4ECdIjHPpCNnOvSurdxeEOYKS8SNhVt8PvOg5tv8aOHYgX5a+my8imqTJeac0lI9KuNpECingdK38PqZode5SHW6TUIcaj2O8QMBTwH2axHjmzR/1+X0UN3oZE8HUSzP6DS6kn9H31arbOE+rOU3CXyHB/rH68lzgdv\" +",
+								"        //     \"VRNLEOH8RXmAMekrkUyeeRwE/VTxcGydTkIJmK5ZVTrgl7isgqDfyPNJxvAY3eRD8R+IIWi9W4CPCTXhszXr//TqbZn7TAbfWeuVmf3affO4DHRDSRX3V+kExFcjNP/YpHYD6RTBPpRn60xyQTVdJu75Sm91lpYU+qv6L3LhxaoD+n6Rk9wEq1d4u0rb8VWXXhgjmLgI\" +",
+								"        //     \"9Jg06rTz8FvKcY/t1iaVhdanQR9xCGEPa6IoO9VN5iCQiCoZiVOfpPaSiEUg3crRrQSgnTRTID+kMcl1k/R/8v14RYJZ/AqxLMj2nFPF3mYf4i0SLN4T81BqdIdZ+ssT1Vk/Q+4BFciP8S3b9Sf7eqzV0Ufw/oI5rsr4pgb8blQwVq30T5UCpF1jWaXH/ERfgiEl0nAj\" +",
+								"        //     \"5C/fte+aAKZo6rD5/HveLtavmOIqI8Q/c/A/wIeADo9haRj2h8QuBumbTNqvM9wC1aKOJy4P9QfXmptLI7RMSduNN2HxF5dcuMulsBgDNVp6c1DmmRcjfu3QPN0ryqpEU/oDodnafJleGSnhuCZKpHchiZnC1qZ5Pka70W1w5vYduIi1aO188suQLyZS2Ni3reJDnJ4E\" +",
+								"        //     \"46icjzSfV1kyfTR0sDnAB8EPeC4+zeroRFYBbavJWlOMj1EnZthUQlwZi92ZccEJRPBQLCrk1DId6OYRXu2n8v8ITXp2dJyAYyoU/2JsZSaRUHBcnUQSLCFRrcQMRWVYBc7wBuDhsbdoSNDWn5Gh7znMjTgdqwsSGj8v1gQBboCBsb2sPGhvQI5AFt0yR5RomZqzTpIo\" +",
+								"        //     \"Gt9CbeZBFSIDl6Vn1zkH66Pe2whKG9z7JbfqUvaTL5anqlyP1nwGdkngcysyMzbpcm8tawsSGUCblKhJP1tNw58ot15rkBQqBL/dulMno0Dpk887Vd10UBlrXAK97idjx9Ecjj1facfgJpOuP1+bs9399SaUMd0lIfUz+UeP2/zTPV4v34cHO4lxJ/H5cz9prM3OMl7z\" +",
+								"        //     \"kt0BlvzKJFMSLG+RQhfSNRROHs8jqqCDSYJde2lPi0RcRqjiG3/Vn2KEk4Xk5s/LGEmXbC9jeG4pPatQe1bdbKe4KEoFYOzrv7uX6s5+sJtDLfXcDki3mmSkkBIdqofo+Q1sqW8/wT1bw96PSjVxq8Fk32BH05bJFZM8GbNJ+VBuovDHO9/wdNydBzu4Jk6teaqGcC52\" +",
+								"        //     \"lyV+qyOpnlT6jf5nhzojWKguX1+evq80pNwFpv4SoWdqtOZ6id86XJpOk7xfd1ycVM1Xu2COMY9W1W7d7t+SwXSOM5XPWO0ltqB3HvZKQdbff6Y7xH7oHM9xPy7pvplVdVDD/3XhNW+cIm0ovrm6Xa1xRVydrxHGF6C7GDTydouoewu2X4KuS4+QQTjiPc+Yoy5AfE5j\" +",
+								"        //     \"0krJzMmEZc1C/yyazqx2yJ9rXhOTBr+xGUyN80lFSJME+TiDFKcq1kpvU3qcs8Qo5pAhY6U61XbWztzxws8NxckExtkDm6WD7CK73yZwMniQAq8jS07gJt6PI0rBgjs9k/K62wTUQ+CZemscNzpj9IX5rEeFwktssj9l0qIyuy+JJ8hFEgJfRINjYEucrfd1nmaUyByq\" +",
+								"        //     \"0fYMy27605WEwNK8r1mFlUIe9YS3bz70nMupD41EVk1twyrPSGoKSa+KzPEcTLyGy8mzDTPhjprMib8MOZjDuAG3ERlQlafRZROOqY8QgoEr7b+1mlQ02mHRLcwUz8am9V682fdMNESQHCG4kkx4wnzFGS5+MDTOZnGDhKWEjbygFbgmTqZvXTv2rCRbltQd6iUJZvws\" +",
+								"        //     \"jPVeHNm6zkpajmtORpmcy5CarHSdLkq6RpNYqozpUL4UT6svfRvcv095m4COw4tfFhXLrDFsnp5Qw/8bvXW1BzcuY/MIAMv8QgkfN9SVi7ZXOfXFTHba6H7Po7iB10IvHZFxF2bSG7+T7IDa5sBImxxGd9jnjdB8huut/lcg0sVz3AkiFqMv0J2SMin3PUD0f0M8E7pC\" +",
+								"        //     \"XgaVB35Zl3bype5eeT0zRpap36rgqXzxWNwc685+Q7/oN+iDvCuMjPpPLLpZEU2zm/XTI0QXVai8vfCQfqj37H3iUy1qrMzrxrM7iE24yIINJKc3IYR8GjCcDsIJla5d0fl6ZT5sn9xr1se39btlpFzMfp+5M1ngk981WRZ6vnA6z2Fshn9V0cF7SJdnAskcm9QW09HJ\" +",
+								"        //     \"f7NlzC2qX61Kt+W3B5fb0DaGl7jWIJXkYrYrrIgkzYuY7M69dDtpfE/G+QmHEBQUnNwE72ihkkDruSxOzPk9v5MplVNxD2tg1FS3x+L1/5tUu+rOZBhLFdK07kkHyP58D0VfUKqfjj+hm784CLg2SqRteerbIiLKcv6TMUIYae/2Z6kEyVBclUjSZ5Lk91nwScHSRTkZ\" +",
+								"        //     \"/ji7j8qmKbmZvpyzNK4IIWs7UQhF4/Rflpgzlvx+Oid9fjwuk1QTKVUPb2DGm+5Z6vbana/JLnEhiHC8dPCpKpIEim4lqAFnnz5nVg9R4kRPqmUT0uI74iSKaqvfSVjLSgSENeQF8gZ5XIdY3+Rmb0+z1zNopOJnjzDofN8i1m1Y7D2LNTVrZLvkLPBXKk588LPX/tPK\" +",
+								"        //     \"By1CSOyo/1jFbGIr/aKyS37VF6l36TxKFXkDjsSmKTPkB28/3kdjwPPdvdKQyxUoKyycQmvpt4/V8RVM4it+0Jepd/XxumB8USXM7Q3qjyobLLFwOfH2BB6AF+i8tFmoSL5v1UjvcVIoSp9CVLfpO3pjWAi8ZciwvFd4isxnta3G/pi3pG2zwyWoWn4nJl1uu7r+C2Xy\" +",
+								"        //     \"zTpJ0oYrgKF74vw4WpKzwhLRZ2qH0niEhOwKWKLA6SqY165hxpG+NxCbfLBiivQuSyAJfHtkztjEk+j/AWh6eAJzV2L+j/09W+c+VffEpO9g/q3ki7+tUAGuxAmnyT14dH4zLK20QmV9IXtXtBYzKLN58O8qyuCVS39+r76JpNwAvSynvp25oTLY4XB8nUy7gAxGX0BT\" +",
+								"        //     \"yGg06N2Qflu14gP+E9WnxKVe93aZG4VEf5jAqTEA3C/+IiGsU1GcIsuZaH6U1vJDHzM8TqPkTJhOMJe3cSdrdCrpcgUQFjJhLEKwnTTWRW/pjsxt+41IjB0YVL7tu9R4z6VnPv5xL6GXnXhZ75+KRI6svSHOaLHDISrDh9W21K+3nudvoym/M13t/hEkpzHmE9LnNiFn\" +",
+								"        //     \"3h8uO1UperXi/gEhwjs7YGl88VrdwPacWcXmQn853yw3xM7T1JGkWUqBn1x4YhaHjtmqQLpEnWeeMUeM98Ebf3s9nTGv5ZZB7tXjhNk9K3SHZrjO/ag1NEe9WH53n+qVP03ePRWGssmnD7Qmd69e6i71ytUI71tKcxRv6iJm/cF4t8p4iAr6Nvl0JW1kXtHizOv8cli0\" +",
+								"        //     \"YJv0dLy4pkOIoG76JIW/eKSSxduD1RrYwEwhzh7hX0LvsOvc9dQmblj8jteBFyPQSxEsLeneSaH6Z32bX0PPt5Mm/8bKhkhbSahxg88hRq9Vqn36vybXatIM/jkjRf0QRbJ0dns3dpWo7fK+RAbaZvI26GvrOUbtUqWmiS34bbRrJB5XVqot4s8muNVjT9fgWXzLhUK3\" +",
+								"        //     \"qHJukS/Y9+X4PLTt+qcjukff4AlyW9RNrAGi9IEWqSrNd3qwq4CFqkhUf3tnt1a8btd/yu+m+717c9uvc5XOLiukHGqQ2XA3ajzJadks8uffe6FouLgMeiHDT9fhSXyHm7ntOh53fJvH5CWtA1Kjfflxu1by0FIs56xoMyV9/QPR1q/3N5fdaBy/FbqTKbJAv+XtXnRX\" +",
+								"        //     \"RN8iOt1D0dXt8+DnwNl6S601NWVqu/b9D9GzwXQrvGKGpLc4F+3inC/6ZIdFueDLdqUbgJWFoMk7CoEZ/04voqXDLeeYz4kRmBMwPj5RDECXO9kEsPySFfQBu5GriufGHTgGFXL0oUhYab0akIBa4t0cpeJSLcCrQVOKEgcvDO0vVjvAnaFBGZVtwFuO0b01Xvf8TtJ5\" +",
+								"        //     \"ynVTgn4VqFd5pAXv3jqv9MaRC7JeQteScCVMscnSLieEMCntEqfZAEtilsbMjqnkqVXSrC2ZR30kOZFyjYqe8zefVLyEyepWckRIpb1R+tDOHEBpVVqvpP9xz6O0RETRQ4MSJvnGdK26pSu5vVB9v62YtY6l3fDmxUsmh/dZul/kiov1YAO/06qc/qVWZW7d/q7cGM9n\" +",
+								"        //     \"BOVDntGpOuAnJ2sGRlgvp0leSlwpOpdWFjQ1rJtFOkYadxp3Z09dPXUZLvTNUl2mfarH5uoUgnNhSbsMCd5Hg7fUllox0vypH6xl463PduIArssypAOIUI6wf5ZulQBMN/Xn/X59dpX55HPpT+2NOyhlpOMeswWvp3JJ850v1VdMISaZXLHLqMkXyDTnGwW2bIzYNpV6\" +",
+								"        //     \"MB/RGWHa9rOFAwEi88TctMGe0H7mdxEY079weyMhgMI0BYMqvewDnzmkZx21/ARUv2p7fY7MA5hZfgokPLsbewGA4gjJhjPL24vhR35Ma1vH0bcPvDetxZRn8oX9i037zcUg7W6DzwDM5B22tibDDC2nvCAhc1ugIXCh8tb2hZj/P9/Lp8YVPGRMBgOIBNwjzTsAN3SN\" +",
+								"        //     \"r1vDVn5e3AOtyBcncZWRkMpmH1p2lV4ZL0vk7fWdT7Ejmcv+cbwP3lC5vMjDIYjLAGJK1S3HaVq3B7wkr2URvTuFSA7+M2N+ds2A0GI6yhEFd0ONvluGz42hGsQxaXxXsjbntLS/nCJouoGQxGWMPWtipwR7V+Drfxc0IR6xKda3QvbmPmS0Dv25nFbjAY9lPCyiOusb\" +",
+								"        //     \"gd+eeIwKbj9pkNt1453B6qlbijiu/BbfTtNqIyGIywikla4DbhTscddXIS7syhabiNl9ExthGineBp3IbRNdKiHsXtXN9qGpXBYIS1LwgswDnnx+H8Wwfjdu5Xe6TVI6Jqxh2n0YJLnzCSMhgMBoPBYDAYDAaDwWAwGAwGg8FgMBgMBoPBYDAYDAaDwWAwGAwGg8FgMB\" +",
+								"        //     \"gMBoPBYDAYDAaDwWAwGAwGg8FgMBgMBoPBYDAYDAaDYb/B/wGfV3MI2BrrMgAAAABJRU5ErkJggg==\"",
+								"        // );",
+								"",
+								"",
+								"    }, 500);",
+								"});",
+								""
+							],
+							"request": [],
+							"response": [],
+							"attributes": [],
+							"data": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"fieldNo": 99998,
+			"data": []
+		}
+	],
+	"ver": "22.8.3.1010",
+	"application": "addnotestoimage",
+	"title": "",
+	"description": "Add notes to images",
+	"enableFileStorage": false,
+	"enableManifest": false,
+	"enableStylesheet": true,
+	"enableObfuscate": false,
+	"onlyRunLaunchpad": false,
+	"disabled": false,
+	"loadLaunchpadCode": null,
+	"loadApplicationCode": null,
+	"appType": "C",
+	"ui5_m": true,
+	"ui5_f": false,
+	"ui5_table": false,
+	"ui5_tnt": false,
+	"ui5_uxap": false,
+	"ui5_chart": false,
+	"ui5_theme": "sap_fiori_3",
+	"ui5_version": "",
+	"ui5_language": null,
+	"cus_theme": "",
+	"css": [
+		"==OBJECT STRING==",
+		".hideScrollBar section {",
+		"    overflow: hidden;",
+		"}"
+	],
+	"header": [
+		"==OBJECT STRING==",
+		"<!-- Signature Pad -->",
+		"<script src=\"https://cdn.jsdelivr.net/npm/signature_pad@2.3.2/dist/signature_pad.min.js\"></script>"
+	],
+	"manifest": "",
+	"globalScript": "",
+	"deleted": false,
+	"libHighchart": false,
+	"libHighmap": false,
+	"publicAccess": false,
+	"ui5_bootstrap": false,
+	"apis": []
+}

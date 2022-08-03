@@ -1,0 +1,47 @@
+{
+	"id": "07587AA9-0313-ED11-BD6E-000D3AB1D9FF",
+	"createdAt": "2022-08-03T08:09:57.753Z",
+	"createdBy": "kristin.eliassen@neptune-software.com",
+	"git": {
+		"targetServers": [],
+		"remote": "https://github.com/neptune-software-marketplace/neptunesoftware-dxp-abb-sketchonimage",
+		"testServers": []
+	},
+	"name": "neptunesoftware-dxp-abb-sketchonimage",
+	"description": null,
+	"ver": "22.8.3.810",
+	"enableCICD": true,
+	"apps": [
+		{
+			"id": "97E09C1E-5F7F-EC11-94F6-281878517667",
+			"ver": "22.8.3.1010",
+			"application": "addnotestoimage",
+			"title": "",
+			"description": "Add notes to images"
+		}
+	],
+	"api": [],
+	"odataMock": [],
+	"odataSource": [],
+	"dictionary": [],
+	"jsclass": [],
+	"jsscript_group": [],
+	"theme": [],
+	"pdf": [],
+	"rulesengine": [],
+	"reports": [],
+	"api_authentication": [],
+	"api_group": [],
+	"tile": [],
+	"category": [],
+	"launchpad": [],
+	"certificates": [],
+	"role": [],
+	"systems": [],
+	"doc": [],
+	"wf_notifications": [],
+	"wf_definition": [],
+	"department": [],
+	"script_scheduler": [],
+	"connector": []
+}
